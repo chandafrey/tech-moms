@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Chanda Frey Portfolio Home Page on Web Development skills">
+    <meta name="author" content="Chanda Frey">
+    <title>Chanda Frey | Portfolio</title>
+
+    <!-- Facebook / Open Graph -->
+    <meta property="og:title" content="Chanda Frey | Portfolio">
+    <meta property="og:description" content="Chanda Frey Portfolio Home Page on Web Development skills">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://chandafrey.github.io/tech-moms/portfolio2/index.html">
+    <meta property="og:site_name" content="Chanda Frey">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://chandafrey.github.io/tech-moms/portfolio2/profile-picture-2025.jpg">
+    <meta property="og:image:alt" content="Chanda Frey — Web Developer portfolio">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="822">
+    <meta property="fb:app_id" content="YOUR_FB_APP_ID">
+
+    <!-- Twitter (optional) -->
+    <!-- <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Chanda Frey | Portfolio">
+    <meta name="twitter:description" content="Chanda Frey Portfolio Home Page on Web Development skills">
+    <meta name="twitter:image" content="https://your-domain.example/assets/og-image.jpg">
+    <meta name="twitter:site" content="@your_twitter_handle">
+
+    <link rel="canonical" href="https://your-domain.example/"> -->
+
+    <!-- Google Fonts Here -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Nunito+Sans:wght@400;600&family=Raleway:wght@500;700&display=swap"
+        rel="stylesheet"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="stylesheet" href="styles/styles-large.css">
+
+    <!-- JS Links Here -->
+    <script src="scripts/navigation.js" defer></script>
+    <!-- Favicon Link Here -->
+</head>
+
+<body>
+    <header>
+        <!-- In the header, put elements in this order:
+         Logo, Menu Button, Nav -->
+
+        <a href="index.html" class="logo">
+            <!-- <span>Chanda Frey</span> -->
+
+            <img src="images/head-side-thinking2.svg" alt="logo - head with gear brain" width="40" height="40">
+        </a>
+
+        <!-- use "Menu" or "Open menu" for the label - 
+        this tells the screen reader user what will happen when they activate it -->
+        <!-- Add aria-expanded="false" and toggle it with JS when menu opens. -->
+        <!-- Add aria-controls="nav-bar" to connect the button to the controlled element. -->
+        <button type="button" 
+            id="ham-btn"    
+            class="hamburger" 
+            aria-label="Menu" 
+            aria-controls="nav-bar"
+            aria-expanded="false">
+            <!-- 3 spans for 3 lines as my hamburger icon and use transform in css -->
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </button>
+
+        <nav id="nav-bar">
+            <ul>
+                <li class="current"><a href="index.html" aria-current="page">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="intro-text">
+                <h1>Chanda Frey</h1>
+                <p class="role">Web Developer</p>
+                <p class="tagline">I am a student developing skills in creating user-focused web experiences using HTML, CSS and JavaScript.</p>
+                <a href="portfolio.html" class="cta">View my Work</a>
+            </div>
+
+            <div class="hero-img">
+                <img src="images/chanda-profile1200x822.jpg" alt="profile picture of Chanda Frey" width="600">
+            </div>
+        </section>    
+    </main>
+
+    <footer>
+         <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="20" height="20"></a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="20" height="20"></a>
+                <a href="https://www.linkedin.com/in/chanda-frey/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="20" height="20"></a>
+                <a href="https://github.com/chandafrey/" target="_blank"><img src="images/github.svg" alt="github" width="20" height="20"></a>
+            </div>
+    </footer>
+</body>
+
+</html>

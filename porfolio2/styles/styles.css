@@ -1,0 +1,197 @@
+/* font-family: 'Raleway', sans-serif;
+font-family: 'Nunito Sans', sans-serif;
+font-family: 'Caveat', cursive; */
+:root {
+    --white-cream: #fefffd;
+    --light-green: #e8e8e4;
+    --darker-light-green: #ddded9;
+    --dark-green: #59533f;
+    --darker-green:#534d3b;
+
+    --medium-green: #a7a598;
+    --rich-black: #0d1321ff;
+    --dark-caviar: #303030;
+    --dark-gray:  #222;
+
+    --shadow-light: 0 2px 5px rgba(0, 0, 0, 0.2);
+    --shadow-medium: 0 2px 6px rgba(0, 0, 0, 0.5);
+    --shadow-strong: 0 0 30px rgba(0, 0, 0, 0.5);
+}
+
+/* --------------GLOBAL STYLES--------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    /* background: linear-gradient(135deg, var(--dark-green), var(--light-green)); */
+    font-family: "Nunito Sans", sans-serif;
+    background-color: var(--white-cream);
+    color: var(--dark-caviar);
+    /* display: flex; */
+    /* display: block; */
+    /* flex-direction: column; */
+    /* min-height: 100vh; */
+
+}
+
+/* --------------HEADER--------------- */
+header {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--light-green);
+    padding: .75rem 1rem;
+    box-shadow: var(--shadow-light);
+}
+.logo img {
+    display: block;
+    width: 40px;
+}
+/* HAMBURGER */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 32px;
+    height: 24px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    /* z-index: 100; */
+}
+/* this targets the 3 span elements in the button and styles them as 3 lines */
+.hamburger span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-green);
+    border-radius: 3px;
+}
+/* These 3 rules Transform the 3 lines to "X" when active 
+by turning off the opacity of the middle line and rotating
+the top and bottom lines 45 deg...-11px seems to help the x line up straighter*/
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-11px) rotate(-45deg);
+}
+/* This is my typical option for hamburger button toggle */
+/* 
+.hamburger:before {
+    content: "☰";
+} 
+.hamburger.open::before {
+    content: "X";
+} */
+
+/* NAVIGATION */
+nav {
+    /* display: none; */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100%;
+    text-align: center;
+    background-color: var(--light-green);
+    box-shadow: var(--shadow-light);
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.4s ease-out;
+}
+nav.open {
+    display: block;  
+    max-height: 300px;  
+}
+nav ul {
+    list-style: none;    
+    margin: 0;
+    padding: 0;
+}
+nav li {
+    border-bottom: 1px solid var(--darker-light-green);
+}
+nav a {
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+    color: var(--dark-green);
+    font-weight: 600;
+    /* width: 100%; */
+}
+nav a:hover {
+    background-color: var(--darker-light-green);
+}
+
+/* --------------HERO SECTION--------------- */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 2rem 1rem;
+}
+.hero h1 {
+    font-family: "Caveat", cursive;
+    font-size: 2.2rem;
+    color: var(--darker-green);
+}
+.hero .role {
+    font-weight: 600;
+    /* color: var(--medium-green); */
+    color: var(--dark-green);
+    margin-top: .25rem;
+}
+.hero .tagline {
+    font-family: "Raleway", sans-serif;
+    color: var(--dark-caviar);
+    margin: 1rem 0 1.5rem;
+    max-width: 320px;
+}
+.hero .cta {
+    display: inline-block;
+    background-color: var(--dark-green);
+    color: var(--white-cream);
+    padding: .75rem 1.25rem;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: var(--shadow-light);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.hero .cta:hover {
+    background-color: var(--darker-green);
+    transform: scale(1.05);
+}
+.hero-img img {
+    width: 80%;
+    max-width: 320px;
+    margin-top: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-medium);
+}
+
+/* --------------FOOTER--------------- */
+footer {
+    background-color: var(--darker-light-green);
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+footer .social a {
+    margin: 0 0.5rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+footer .social a:hover {
+    transform: scale(1.2);
+
+}

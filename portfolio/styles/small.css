@@ -1,0 +1,50 @@
+
+/* CSS Blues Color Vibe*/
+/* :root {
+--rich-black: #0d1321ff;
+--prussian-blue: #1d2d44ff;
+--paynes-gray: #3e5c76ff;
+--silver-lake-blue: #748cabff;
+--eggshell: #f0ebd8ff; 
+}*/
+
+/* CSS Peach and Green Color Vibe */
+:root {
+    --almond: #f1e3d3;
+    --desert-sand: #ddbea9;
+    --persuan-orange: #c58c6d;
+    --ash-gray: #b7b7a4;
+    --reseda: #6b705c;
+}
+
+/* Set universal at the top of every css 
+this helps the whole page content sit on a page with 
+no margin and padding...then you set the individual
+sections of your page to the margin and padding you want*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #3e5c76ff;
+    color: white;
+}
+
+.intro {
+    border: black;    
+    max-width: 500px;
+    text-align: left;
+}
+
+
+footer {
+    background-color: rgb(221, 227, 232);
+}
+.centered {
+    text-align: center;
+}

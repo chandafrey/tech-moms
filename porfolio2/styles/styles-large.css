@@ -1,0 +1,41 @@
+@media only screen and (min-width: 38rem) {
+    /* turn hamburger menu off for desktop view */
+
+
+    .hamburger {
+        display: none;
+    }
+    header {
+        grid-column: 1/3;
+        grid-row: 1/2;
+        gap: 2rem;
+    }
+    nav {
+        display: block;
+        position: static;
+        box-shadow: none;
+        width: auto;
+        max-height: none;
+        overflow: visible;
+    }
+    nav ul {
+        display: flex;
+        gap: 1rem;
+    }
+    nav li {
+        border: none;
+    }
+  
+    .hero {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+        gap: 6rem;
+        padding: 4rem 2rem;
+    }
+    .hero-img img {
+        max-width: 600px;
+    }
+
+   
+}
