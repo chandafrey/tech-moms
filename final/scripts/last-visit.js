@@ -24,7 +24,7 @@ if (!lastVisit) {
     } else if (daysBetweenVisits === 1) {
         message = "You visited 1 day ago.";
     } else {
-        message = "You last visited ${daysBetweenVisits} days ago.";
+        message = `You last visited ${daysBetweenVisits} days ago.`;
     }
 }
 
