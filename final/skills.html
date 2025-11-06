@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my Profile Porfolio Skills page on my skills in Web Development">
+    <meta name="author" content="Chanda Frey">
+    <title>WDD 231 Final Project | Profile Portfolio Skills Page</title>
+    
+  <!-- FACEBOOK META -->
+    <meta property="og:title" content="WDD 231 Final Project | Profile Portfolio Skills Page">
+    <meta property="og:description" content="This is my Profile Porfolio Skills page on my skills in Web Development.">
+    <meta property="og:url" content="https://chandafrey.github.io/wdd231/final/skills.html">
+    <meta property="og:locale" content="en_US">
+    <!-- These 2 lines need updated -->
+    <meta property="og:image" content="https://chandafrey.github.io/wdd231/final/images/chanda-profile1200x822.jpg">
+    <meta property="og:image:alt" content="Profile picture of Chanda Frey">    
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Profile Portfolio | Chanda Frey">
+    <!--USE THIS LINK TO HAVE FACEBOOK DEBUG META DETAILS https://developers.facebook.com/tools/debug/ -->
+    
+    <!-- Google Fonts Here -->
+    <!-- Optimize Google Fonts -->
+    <!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    </noscript> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+
+    <!-- Style Sheets Here -->
+    <!-- put them in this order -->
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/styles-large.css"> 
+   
+    <!-- JS Links -->
+    <script src="scripts/navigation.js" defer></script>
+    <script src="scripts/date.js" defer></script>  
+    <script src="scripts/create-job-cards.js" defer></script>
+    <script src="scripts/grid-list.js" defer></script>
+    <script src="scripts/weather.js" defer></script>
+
+
+    <!-- Favicon link -->
+    <link rel="icon" href="favicon.ico">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <!-- Adding a link to this image should make it so a person can
+            click on the image and return to the home page...Typically this 
+            would be href="index.html" -->
+            <a href="index.html" class="logo">
+                <img src="images/logo-orange.svg" 
+                     alt="profile of a person with a gear for the brain"
+                     width="24" 
+                     height="24"
+                     class="logo">
+            </a>
+            <span>Chanda Frey</span>
+
+            <!-- use "Menu" or "Open menu" for the label - 
+            this tells the screen reader user what will happen 
+            when they activate it -->
+            <!-- Add aria-expanded="false" and toggle it with JS when menu opens. -->
+            <!-- Add aria-controls="nav-bar" to connect the button to the controlled element. -->
+            <button type="button"
+                    id="ham-btn"
+                    class="hamburger"
+                    aria-label="Menu"
+                    aria-controls="nav-bar"
+                    aria-expanded="false">
+            </button>
+
+            <nav id="nav-bar">
+                <ul>
+                    <!-- put the class="current" on the link specific to the 
+                    current page...in this case Home -->
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li class="current"><a href="skills.html" aria-current="page">Skills</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="skills">
+            <section class="hero">
+                <h1>Skills in Motion</h1>
+                <p>See HTML, CSS and JavaScript skills in motion on this website.</p>
+            </section>
+        
+            <section id="modals">
+                <h2>JavaScript Functionality</h2>
+                <p>This section is a list of topics I've learned in Web Design and Development classes and are all demonstrated in my website.</p>
+
+                <!-- id="mydialog" in this this div is where the details will go -->
+                <dialog id="mydialog">
+                    <!-- These elements are listed here, but we will reference and fill them in JS -->
+                    <!-- Wrap the title and button in a div, so we can style them side by side in css grid-->
+                    <div class="dialog-header">
+                        <h3></h3>
+                        <button>X</button>
+                    </div>
+                    <p id="components"></p>
+                </dialog>
+            </section>
+            <!-- section id="modals" -->
+            <!-- dialog id="mydialog" -->
+                <!-- div class="dialog-header" -->
+                    <!-- h3 -->
+                    <!-- button (close) -->
+                <!-- </div> -->
+                <!--p id="javascript-directions" -->
+            <!-- </dialog> -->
+            <!-- div class="javascript-functionality-card" -->
+                <!-- h3 -->
+                <!-- button class="learn-more" -->
+            <!-- </div> -->
+        <!-- </section -->
+            
+
+    <!-- Make sure type="module" is added to the script -->
+    <!-- type="module" - Important so my import works for "instructions" -->
+    <script src="scripts/modal-instructions.js" type="module"></script>
+
+    <!-- WEATHER - CURRENT / FORECAST -->
+            <!-- Current Weather Card -->
+            <section class="weather">
+                <h2>Weather</h2>
+                <p>I used a Fetch API to get the weather for my city - Eagle Mountian, Utah</p>
+                <div class="current-weather">
+                    <h3>Current Weather Today</h3>
+                    <div class="image">
+                        <img id="graphic" src="images/forecast-icon.png" alt="weather picture representing todays weather" width="60" height="60">
+                    </div>
+                    <div class="details">
+                        <p id="description"></p>
+                        <p id="temperature"></p>
+                        <!-- <p id="temperature"><span class="temp-current> </p>-->
+                    </div>
+                    <div class="temp-range">
+                        <p id="temperatureMax"></p>
+                        <!-- <p id="temperatureMax">High:  <span class="temp-number></span></p> -->
+                        <p id="temperatureMin"></p>
+                        <!-- <p id="temperatureMax">Low:  <span class="temp-number></span></p> -->
+                    </div>
+                </div>
+            
+            <!-- Forcast Weather Card -->
+                <div class="forecast-weather">
+                    <h3>5-Day Forcast</h3>
+                    <div id="forecast" class="forecast-container">
+                        <!-- JS will inject forecast days here -->
+                    </div>
+                </div>
+            </section>
+                <!--END WEATHER BOXES -->        
+    
+            <section class="tech-jobs">
+                <h2>Tech Jobs</h2>
+                <p class="tech-jobs-description">This section is a general list of types of jobs that utilize skills in HTML, CSS and JavaScript.</p>
+                
+                <!-- GRID/LIST -->
+                <!-- This div is for my BUTTONS to toggle GRID/LIST -->
+                <div class="menu">
+                    <button id="grid">Grid</button>
+                    <button id="list">List</button>
+                </div>
+                <!-- This grouping is the entire directory to be toggled -->
+                <article id="directory" class="grid">
+                <!-- This div is the array of individual cards -->
+                    <div id="cards"></div>
+
+                    <!-- This is what should be created from JavaScript -->
+                    <!-- repeat sections for each business card -->
+                    <!-- <section> 
+                            <img>card.appendChild(image);
+                            <h3>card.appendChild(name);
+                            <p>card.appendChild(phone);
+                            <a>card.appendChild(websiteLink);
+                            <p>card.appendChild(address);
+                        </section>-->
+                </article>             
+            </section>
+        </main>
+        
+        <footer>
+            <div class="social">
+                <!-- target="_blank" will open this link in a new TAB -->
+                <a href="https://www.facebook.com/chanda.frey/" target="_blank"><img src="images/facebook.svg" alt="facebook" width="16" height="16"></a>
+                <a href="https://www.instagram.com/chandafrey/" target="_blank"><img src="images/instagram.svg" alt="instagram" width="16" height="16"></a>
+                <a href="https://www.linkedin.com/in/chanda-frey/" target="_blank"><img src="images/linkedin.svg" alt="linkedin" width="16" height="16"></a>
+                <a href="https://github.com/chandafrey/" target="_blank"><img src="images/github.svg" alt="github" width="16" height="16"></a>
+            </div>
+            <div class="copywrite">
+                <p>&copy;<span id="currentYear"></span> ~ Chanda Frey ~ Utah</p>
+                <p><span id="lastModified"></span></p>
+            </div>
+
+            <!-- This is my video -->
+            <a href="https://www.loom.com/share/5592035272264127ad9f1124e4cf2828?sid=ec025695-913e-4758-8cab-2687c33f09e8"></a>
+        
+        </footer>
+    </div> 
+</body>
+</html>
