@@ -90,6 +90,24 @@
         "salary_UT": "$60,000-75,000/yr",
         "image_url": "https://www.svgrepo.com/show/1699/web-development.svg",
         "description": "Customizes and maintains WordPress themes and plugins. Uses PHP, HTML, CSS, and JS to enhance website functionality."
+    },
+    {
+        "title": "Junior UI Designer",
+        "salary_UT": "$65,000-75,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/1829/1829586.png",
+        "description": "Designs intuitive user interfaces that align with brand style guides. Works with developers to ensure layouts and visual elements are consistent and user-friendly."
+    },
+    {
+        "title": "Junior UX Designer",
+        "salary_UT": "$70,000-80,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/3798/3798143.png",
+        "description": "Assists in researching user needs and testing design prototypes. Helps create smooth user experiences by improving usability and accessibility."
+    },
+    {
+        "title": "Data Analyst",
+        "salary_UT": "$68,000-78,000/yr",
+        "image_url": "https://cdn-icons-png.flaticon.com/512/1055/1055644.png",
+        "description": "Collects, organizes, and interprets data to help teams make informed decisions. Uses tools like Python, Excel, or SQL to find patterns and present insights visually."
     }
 ]
 }
